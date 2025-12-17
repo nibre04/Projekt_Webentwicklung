@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockTracker | Modernes Finanz-Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light glas-navigation sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-extrabold" href="index.html">
+                <span class="marken-akzent">Stock</span>Tracker
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hauptNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="hauptNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold active" href="index.html">Suche</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="markt.html">Markt</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="info.html">Doku</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-sektion">
+        <div class="container text-center">
+            <h1 class="display-4 fw-extrabold mb-3">Aktienanalyse neu gedacht.</h1>
+            <p class="text-secondary mb-5">Einfach, schnell und übersichtlich – basierend auf echten Marktdaten.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="suche-wrapper shadow-lg">
+                        <input type="text" id="nutzerSuche" class="form-control"
+                            placeholder="Aktienkürzel eingeben (z.B. TSLA)">
+                        <button class="btn btn-suche" onclick="starteAnalyse()">Analyse starten</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h3 class="fw-bold mb-4">Markt-Favoriten</h3>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="aktien-karte shadow-sm border-0 card h-100">
+                    <div class="card-body">
+                        <span class="badge kuerzel-label mb-2">AAPL</span>
+                        <h5 class="fw-bold">Apple Inc.</h5>
+                        <p class="text-muted small">Technologie / USA</p>
+                        <a href="details.html?symbol=AAPL" class="btn btn-link p-0 text-decoration-none fw-bold">Ansehen
+                            →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="aktien-karte shadow-sm border-0 card h-100">
+                    <div class="card-body">
+                        <span class="badge kuerzel-label mb-2">TSLA</span>
+                        <h5 class="fw-bold">Tesla Inc.</h5>
+                        <p class="text-muted small">Automobil</p>
+                        <a href="details.html?symbol=TSLA" class="btn btn-link p-0 text-decoration-none fw-bold">Ansehen
+                            →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="aktien-karte shadow-sm border-0 card h-100">
+                    <div class="card-body">
+                        <span class="badge kuerzel-label mb-2">MSFT</span>
+                        <h5 class="fw-bold">Microsoft</h5>
+                        <p class="text-muted small">Software</p>
+                        <a href="details.html?symbol=MSFT" class="btn btn-link p-0 text-decoration-none fw-bold">Ansehen
+                            →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="aktien-karte shadow-sm border-0 card h-100">
+                    <div class="card-body">
+                        <span class="badge kuerzel-label mb-2">AMZN</span>
+                        <h5 class="fw-bold">Amazon.com</h5>
+                        <p class="text-muted small">E-Commerce</p>
+                        <a href="details.html?symbol=AMZN" class="btn btn-link p-0 text-decoration-none fw-bold">Ansehen
+                            →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="heller-footer py-5 mt-auto">
+        <div class="container text-center">
+            <div class="trenn-linie-hell mb-4"></div>
+            <p class="mb-0 fw-bold">StockTracker</p>
+            <p class="small text-secondary">Studentisches Web-Projekt &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="logik.js"></script>
+</body>
+
+</html>

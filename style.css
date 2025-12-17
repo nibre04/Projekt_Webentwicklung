@@ -1,0 +1,252 @@
+/* Globale Definitionen */
+:root {
+    --hintergrund: #fcfdfe;
+    --akzent-blau: #3a86ff;
+    --text-haupt: #2d3436;
+    --weiss: #ffffff;
+    --grau-hell: #f1f3f5;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--hintergrund);
+    color: var(--text-haupt);
+}
+
+/* Header & Footer */
+.glas-navigation {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--text-haupt);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--akzent-blau);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--akzent-blau);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--akzent-blau) !important;
+}
+
+.marken-akzent {
+    color: var(--akzent-blau);
+}
+
+.heller-footer {
+    background-color: var(--weiss);
+    border-top: 1px solid var(--grau-hell);
+}
+
+/* Hero Bereich */
+.hero-sektion {
+    padding: 80px 0;
+    background: radial-gradient(circle at top right, #eef2ff, transparent),
+        radial-gradient(circle at bottom left, #f5f3ff, transparent);
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* Suchbox Modern */
+.suche-wrapper {
+    display: flex;
+    background: var(--weiss);
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid var(--grau-hell);
+}
+
+.suche-wrapper input {
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 20px;
+}
+
+.suche-wrapper input:focus {
+    box-shadow: none;
+}
+
+.btn-suche {
+    background-color: var(--akzent-blau);
+    color: var(--weiss);
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+
+/* Karten */
+.aktien-karte {
+    border-radius: 24px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.aktien-karte:hover {
+    transform: translateY(-5px);
+    background: var(--weiss);
+}
+
+.kuerzel-label {
+    background: var(--grau-hell);
+    color: var(--akzent-blau);
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.trenn-linie-hell {
+    width: 50px;
+    height: 3px;
+    background: var(--akzent-blau);
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Spezifisch für Detailseite*/
+.bg-hell {
+    background-color: #fcfdfe;
+}
+
+.logo-container {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.kuerzel-label-gross {
+    background: var(--akzent-blau);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.preis-badge {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+
+.waehrung {
+    font-size: 1rem;
+    color: var(--akzent-blau);
+    font-weight: 800;
+    margin-left: 5px;
+}
+
+.daten-karte {
+    background: white;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.info-box-hell {
+    background-color: #f0f7ff;
+    border-left: 4px solid var(--akzent-blau);
+}
+
+.kennzahl-item {
+    font-size: 1.05rem;
+}
+
+
+/* Spezifisch für Dokumentation (info.html) */
+.dokumentations-karte {
+    background: var(--weiss);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.tech-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.tech-box:hover {
+    background-color: #ffffff;
+    border-color: var(--akzent-blau);
+    transform: scale(1.03);
+}
+
+.api-pfad-box {
+    background-color: #f1f3f5;
+    border-radius: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg-akzent-light {
+    background-color: #f0f7ff !important;
+    border: 1px solid #d0e7ff;
+}
+
+code {
+    color: #e83e8c;
+    word-break: break-all;
+}
+
+
+
+/* Spezifisch für Markt-Seite (Tabelle) */
+.table thead th {
+    border-top: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 20px 10px;
+    color: #6c757d;
+}
+
+.table tbody td {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+
+.kurs-positiv {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.kurs-negativ {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.btn-mini {
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
